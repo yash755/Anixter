@@ -1,0 +1,20 @@
+[INFO  - 2018-11-08T09:42:23.508Z] GhostDriver - Main - running on port 54448
+[INFO  - 2018-11-08T09:42:24.410Z] Session [98af8c50-e33a-11e8-8edf-4fb1f82e1925] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/53 (KHTML, like Gecko) Chrome/15.0.87","webSecurityEnabled":true}
+[INFO  - 2018-11-08T09:42:24.410Z] Session [98af8c50-e33a-11e8-8edf-4fb1f82e1925] - page.customHeaders:  - {}
+[INFO  - 2018-11-08T09:42:24.410Z] Session [98af8c50-e33a-11e8-8edf-4fb1f82e1925] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"mac-unknown-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"},"phantomjs.page.settings.userAgent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/53 (KHTML, like Gecko) Chrome/15.0.87"}
+[INFO  - 2018-11-08T09:42:24.410Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 98af8c50-e33a-11e8-8edf-4fb1f82e1925
+[ERROR - 2018-11-08T09:42:28.827Z] Session [98af8c50-e33a-11e8-8edf-4fb1f82e1925] - page.onError - msg: ReferenceError: Can't find variable: Set
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2018-11-08T09:42:28.827Z] Session [98af8c50-e33a-11e8-8edf-4fb1f82e1925] - page.onError - stack:
+  (anonymous function) (https://coderwall.com/packs/application-ab79f51b2ef92a7ee106.js:1)
+  n (https://coderwall.com/packs/application-ab79f51b2ef92a7ee106.js:1)
+  (anonymous function) (https://coderwall.com/packs/application-ab79f51b2ef92a7ee106.js:1)
+  n (https://coderwall.com/packs/application-ab79f51b2ef92a7ee106.js:1)
+  (anonymous function) (https://coderwall.com/packs/application-ab79f51b2ef92a7ee106.js:1)
+  n (https://coderwall.com/packs/application-ab79f51b2ef92a7ee106.js:1)
+  (anonymous function) (https://coderwall.com/packs/application-ab79f51b2ef92a7ee106.js:1)
+  n (https://coderwall.com/packs/application-ab79f51b2ef92a7ee106.js:1)
+  (anonymous function) (https://coderwall.com/packs/application-ab79f51b2ef92a7ee106.js:1)
+
+  phantomjs://platform/console++.js:263 in error

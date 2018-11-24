@@ -1,6 +1,7 @@
 import requests
 import re
 import time
+import pymysql.cursors
 from bs4 import BeautifulSoup
 
 def get_list():
@@ -54,14 +55,36 @@ def get_list():
 											dbPageNumber = page
 											page = page+1
 											print (dbPageURL)
+											try:
+												connection = pymysql.connect(host= "108.167.172.175",
+													user="dockonef_jashg",
+													passwd="gC=wRXPdhUsP",
+													db="dockonef_scrape",
+													charset='utf8mb4',
+													cursorclass=pymysql.cursors.DictCursor)
+												try:
+													with connection.cursor() as cursor:
+														cursor.execute("INSERT INTO anixter_category (category,subcategory,pageurl,pagenumber) VALUES (%s,%s,%s,%s)", (dbCategory,dbSubcategory,dbPageURL,dbPageNumber))
+														connection.commit()
+														print ("Inserted")
+												except Exception as e:
+													print ('Failed Query')
+													print (e)
+												finally:
+													connection.close()
+											except pymysql.Error as e:
+												print("Connection refused by the server..")
+												print("Let me sleep for 2 seconds")
+												print ("Loop5")
+												print ("ERROR %d IN CONNECTION: %s" % (e.args[0], e.args[1]))
+												time.sleep(2)
+												print("Was a nice sleep, now let me continue...")
+												continue															
 						except Exception as e:
 							print(e)
 							print("Loop2...")
 							time.sleep(2)
 							print("Was a nice sleep, now let me continue...")
-
-
-
 	except Exception as e:
 		print(e)
 		print("Loop1...")
