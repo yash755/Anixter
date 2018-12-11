@@ -49,7 +49,7 @@ def get_list():
 
 
 						if str(page) == str(pageCount):
-							url = pageurl
+							url = pageURL
 							headers = {
 							'cache-control': "no-cache",
 							'User-Agent': 'Mozilla/5.0',
