@@ -1,11 +1,5 @@
-from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
-import time
 import requests
-import json
 from bs4 import BeautifulSoup
-import pymysql.cursors
-import os.path
 
 
 def get_list():
