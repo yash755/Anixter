@@ -10,25 +10,6 @@ import os.path
 
 def get_list():
 	try:
-		# options = Options()
-		# options.set_headless(headless=True)
-		# driver = webdriver.Chrome(options=options, executable_path='/Users/yashgupta/Desktop/chromedriver')
-		# driver.get("https://www.anixter.com/en_us/login.html")
-		# time.sleep(2)
-		# driver.save_screenshot('login.png')
-		# name = driver.find_element_by_id('j_username')
-		# name.send_keys('e733733@gmail.com')
-		# password = driver.find_element_by_id('j_password')
-		# password.send_keys('ProdSupp9737')
-		# driver.find_element_by_xpath("//*[@class='positive button primary-large']").click()
-		# time.sleep(2)
-		# driver.get('https://www.anixter.com/en_us/products/Electrical-Wire-and-Cable/c/GROUP_EW?q=%3Arelevance&page=131&op=')
-		# driver.save_screenshot('test.png')
-		
-
-		# html2 = driver.page_source
-		# soup = BeautifulSoup(html2, "lxml", from_encoding="utf-8")
-
 		headers = {
 		'cache-control': "no-cache",
 		'User-Agent': 'Mozilla/5.0',
@@ -40,10 +21,10 @@ def get_list():
 
 		products = soup.find_all('div',{'class':'product-tile-tertiary row'})
 		for product in products:
-			para = product.find('p',{'class':'title-primary'})
-			if para:
-				a_link = para.find('a')
-				a_link = a_link.get('href')
+			# para = product.find('p',{'class':'title-primary'})
+			# if para:
+			# 	a_link = para.find('a')
+			# 	a_link = a_link.get('href')
 				# response1 = requests.request("GET", 'https://www.anixter.com' + str(a_link), headers=headers)
 				# soup1 = BeautifulSoup(response1.content, 'html.parser')
 
@@ -52,9 +33,9 @@ def get_list():
 				# 	print (fragment)
 
 
-			# title = product.find('p',{'class':'title-primary'})
-			# if title:
-			# 	print (title.text.strip())
+			title = product.find('p',{'class':'title-primary'})
+			if title:
+				print (title.text.strip())
 
 	
 
